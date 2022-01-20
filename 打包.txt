@@ -1,0 +1,9 @@
+virtualenv ENV
+ENV\Scripts\activate
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
+
+修改 项目路径下\ENV\Lib\site-packages\PyInstaller\compat.py347行
+if encoding and isinstance(out, bytes):
+
+pyinstaller -i title.ico 监管平台_行业动态.py
+config.ini(修改数据库连接)、evaluation_news.sql 放入打包的文件夹根目录
